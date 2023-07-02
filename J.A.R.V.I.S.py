@@ -10,7 +10,6 @@ engine = pyttsx3.init()
 #----------------------------------------------------------------
 def talk(words):
     print(words)
-    #os.system("say "+ words)
     engine.say("Привет")
     engine.runAndWait()
 
@@ -21,7 +20,7 @@ def command():
     r =sr.Recognizer()
 
     with sr.Microphone() as source:
-        print('Say')
+        print('говори')
         r.pause_threshold = 1
         r.adjust_for_ambient_noise(source, duration=1)
         audio = r.listen(source)
@@ -35,7 +34,7 @@ def make_something(ar_task):
     if ('открой' and 'сайт') in ar_task:
         talk('окей')
         url = 'https://www.google.com/'
-        webbrowser.open(url)
+        webbrowser.open(url) 
 
 while True:
     make_something(command())
