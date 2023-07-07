@@ -34,7 +34,7 @@ def command():
 def make_something(ar_task):
     if ('открой' and 'сайт') in ar_task:
         talk('окей')
-        url = 'https://www.google.com/'
+        url = 'https://www.google.com/webhp'
         webbrowser.open(url)
 
     elif 'Пока' in ar_task:
